@@ -54,7 +54,19 @@ nav {
   letter-spacing: -0.02em;
   text-decoration: none; color: var(--black);
 }
-.nav-links { display: flex; gap: 40px; list-style: none; }
+.nav-links { 
+    display: flex; 
+    gap: 40px; 
+    list-style: none;
+    display: flex; gap: 40px; list-style: none;
+    background: rgba(244, 242, 237, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(42, 35, 35, 0.55);
+    border-radius: 60px;
+    padding: 10px 28px;
+ }
+
 .nav-links a {
   text-decoration: none; color: var(--black);
   font-size: 13px; font-weight: 400;
