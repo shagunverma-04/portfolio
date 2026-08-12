@@ -31,22 +31,6 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Skill bars
-const skillObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-bar').forEach((bar, i) => {
-        const w = bar.getAttribute('data-width');
-        setTimeout(() => {
-          bar.style.width = (parseFloat(w) * 100) + '%';
-          bar.classList.add('animated');
-        }, i * 130);
-      });
-    }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('#skillsSection').forEach(el => skillObserver.observe(el));
-
 // Nav hide/show on scroll
 let lastScroll = 0;
 const nav = document.getElementById('mainNav');
